@@ -1,5 +1,11 @@
 # rotr-test
 
+Initial thoughts regarding this.
+Basic:
+- User
+- Character
+- Game
+
 ## Build Setup
 
 ```bash

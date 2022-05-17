@@ -40,6 +40,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/fontawesome',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     [
@@ -64,6 +65,10 @@ export default {
       }
     ]
   ],
+
+  fontawesome: {
+    component: 'fa'
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

@@ -57,7 +57,7 @@ export const actions = {
   async logoutCleanup ({ dispatch, commit, state, rootState }) {
     try {
       await dispatch('setUserFirebaseEntry', { loggedIn: false, uid: state.uid });
-      await this.$fireAuth.signOut();
+      await this.$fire.auth.signOut();
       commit('setLoggedInStatus', false);
       commit('resetUserProps');
     } catch (error) {

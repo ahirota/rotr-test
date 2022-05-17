@@ -23,7 +23,7 @@ export const mutations = {
 export const actions = {
   getUserGames ({ dispatch, commit, state, rootState }) {
     const unsubscribe = this.$fire.firestore.collection('games')
-      .where('user', '==', rootState.user.uid)
+      .where('users', 'array-contains', rootState.user.uid)
       .onSnapshot((querySnapshot) => {
         const games = [];
         querySnapshot.forEach(function (doc) {

@@ -20,6 +20,12 @@ export default {
           email: vm.$fire.auth.currentUser.email,
           defaultIcon: vm.$fire.auth.currentUser.photoURL
         });
+        if (vm.$store.state.character.listenerUnsubscribe === null) {
+          await vm.$store.dispatch('character/getUserCharacters');
+        }
+        if (vm.$store.state.game.listenerUnsubscribe === null) {
+          await vm.$store.dispatch('game/getUserGames');
+        }
         await vm.$router.push('main');
       } else {
         console.log('User is not logged in.');

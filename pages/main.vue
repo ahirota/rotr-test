@@ -9,10 +9,10 @@ export default {
   name: 'MainPage',
   async mounted () {
     if (this.$store.state.character.listenerUnsubscribe === null && this.$store.state.user.uid !== null && this.$store.state.user.loggedIn) {
-      await this.$store.dispatch('characters/getUserCharacters');
+      await this.$store.dispatch('character/getUserCharacters');
     }
     if (this.$store.state.game.listenerUnsubscribe === null && this.$store.state.user.uid !== null && this.$store.state.user.loggedIn) {
-      await this.$store.dispatch('games/getUserGames');
+      await this.$store.dispatch('game/getUserGames');
     }
   }
 };

@@ -28,7 +28,10 @@ export const actions = {
         const characters = [];
         querySnapshot.forEach(function (doc) {
           characters.push({
-            id: doc.id
+            id: doc.id,
+            name: doc.data().name,
+            description: doc.data().description,
+            image: doc.data().image
           });
         }, (error) => {
           console.error(error);

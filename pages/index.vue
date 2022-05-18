@@ -1,6 +1,6 @@
 <template>
-  <div class="title-page">
-    <div class="text-center">
+  <div class="container mx-auto h-full py-6">
+    <div class="flex item-center justify-center">
       <h1 class="title">
         ROTR Test Index Page
       </h1>
